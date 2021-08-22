@@ -2,7 +2,9 @@
   <section class="homes">
     <ul class="homes__list homes-list">
       <li v-for="home in homes" :key="home.objectID" class="homes-list__item">
-        <HomeCard :home="home" />
+        <nuxt-link :to="`home/${home.objectID}`" no-prefetch>
+          <HomeCard :home="home" />
+        </nuxt-link>
       </li>
     </ul>
   </section>
@@ -11,6 +13,16 @@
 <script>
 import homes from '~/data/homes.json'
 export default {
+  head() {
+    return {
+      title: 'Homepage',
+      meta: [{
+        name: 'description',
+        content: 'This is a homepage',
+        hid: 'description'
+      }]
+    }
+  },
   data() {
     return {
       homes: homes.slice(0, 3)
