@@ -1,8 +1,16 @@
 [
   {
+    "name": "home-id",
+    "path": "/home/:id?",
+    "component": "/home/alexandr/courses/nuxt/Projects/nuxt-project/nuxt-app/pages/home/_id.vue",
+    "chunkName": "pages/home/_id",
+    "_name": "_252f3a04"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/home/alexandr/courses/nuxt/Projects/nuxt-project/nuxt-app/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_b23f4470"
   }
 ]
